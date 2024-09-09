@@ -1,0 +1,60 @@
+http://localhost:8081/subjects/Avro-Demo-value/versions/latest
+http://localhost:8081/subjects
+docker-compose down
+ docker exec -it kafka-tools ping broker
+ docker-compose up -d kafka-tools 
+ docker-compose up -d  
+myfirstschema was:
+
+WHILE ADDING any changes is schema and adding new data then add default to avoid 409 error
+but for removing or changing any data it is not necessary
+
+{
+  "namespace": "com.kafka.dto",
+  "type": "record",
+  "name": "Employee",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "dob",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int" for adding new you might get 409 error Schema.Service that time put default
+    }
+  ]
+}
+Finally after completion give docker-compose down and remove the containers
+
+{
+  "id": 3,
+  "firstName": "John",
+  "middleName": "H.",
+  "lastName": "Doe",
+  "emailID": "john.doe@example.com",
+  "salary": 50000,
+  "dob": "31/07/1998",
+  "age": 26
+}

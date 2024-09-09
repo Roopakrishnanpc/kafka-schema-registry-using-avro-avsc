@@ -1,0 +1,43 @@
+{
+  "namespace": "com.kafka.dto",
+  "type": "record",
+  "name": "Employee",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "firstName",
+      "type": "string"
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "lastName",
+      "type": "string"
+    },
+    {
+      "name": "emailID",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "salary",
+      "type": "long"
+    },
+    {
+      "name": "dob",
+      "type": "string",
+      "default": ""
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "default": 0
+    }
+  ]
+}
